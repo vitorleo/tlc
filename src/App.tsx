@@ -1,22 +1,31 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import './App.css'
 import Ticket from './components/Ticket/Ticket'
 
 function App() {
 
-  const [primaryNumbers, setPrimaryNumbers] = useState([2,4,6]);
-  const [secondaryNumbers, setSecondaryNumbers] = useState([11,13,15]);
+  const [primaryNumbers, setPrimaryNumbers] = useState([]);
+  const [secondaryNumbers, setSecondaryNumbers] = useState([]);
 
-  function fetchResults () {
-    fetch("https://data.api.thelott.com/sales/vmax/web/data/lotto/latestresults",
+
+  async function fetchResults():Promise<void> {
+    return fetch("https://data.api.thelott.com/sales/vmax/web/data/lotto/latestresults",
       {
         method:"POST",
         body: JSON.stringify({ "CompanyId": "GoldenCasket", "MaxDrawCountPerProduct": 1, "OptionalProductFilter": ["Powerball"] })
       }).then(async (res)=>{
         const responseObj = await res.json();
-        setSecondaryNumbers([1,2,3])
-        console.log(responseObj)
+        setSecondaryNumbers(responseObj.DrawResults[0].SecondaryNumbers);
+        setPrimaryNumbers(responseObj.DrawResults[0].PrimaryNumbers);
+      }).catch(err=>{
+        // Treat error and inform user
+        console.log(err);
       })
+  }
+
+  function resetData () {
+    setPrimaryNumbers([]);
+    setSecondaryNumbers([]);
   }
 
   return (
@@ -28,6 +37,7 @@ function App() {
         primaryNumbers={primaryNumbers}
         secondaryNumbers={secondaryNumbers}
         onFetchResults={fetchResults}
+        onResetData={resetData}
         />
     </>
   )
