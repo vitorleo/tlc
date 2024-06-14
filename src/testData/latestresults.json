@@ -1,0 +1,129 @@
+{
+    "DrawResults": [
+        {
+            "ProductId": "Powerball",
+            "DrawNumber": 1465,
+            "DrawDate": "2024-06-13T00:00:00",
+            "DrawDisplayName": "Powerball Draw 1465",
+            "DrawLogoUrl": "http://media.tatts.com/TattsServices/Lotto/Products/Powerball_v1.png",
+            "PrimaryNumbers": [
+                9,
+                6,
+                2,
+                26,
+                25,
+                32,
+                17
+            ],
+            "SecondaryNumbers": [
+                4
+            ],
+            "TicketNumbers": null,
+            "Dividends": [
+                {
+                    "Division": 1,
+                    "BlocNumberOfWinners": 0,
+                    "BlocDividend": 0.0,
+                    "CompanyId": "GoldenCasket",
+                    "CompanyNumberOfWinners": 0,
+                    "CompanyDividend": 0.0,
+                    "PoolTransferType": "TO_DRAW",
+                    "PoolTransferredTo": 1466,
+                    "PrizeBoostValue": 0.0
+                },
+                {
+                    "Division": 2,
+                    "BlocNumberOfWinners": 2,
+                    "BlocDividend": 262241.5000,
+                    "CompanyId": "GoldenCasket",
+                    "CompanyNumberOfWinners": 0,
+                    "CompanyDividend": 262241.5000,
+                    "PoolTransferType": "NONE",
+                    "PoolTransferredTo": 0,
+                    "PrizeBoostValue": 0.0
+                },
+                {
+                    "Division": 3,
+                    "BlocNumberOfWinners": 65,
+                    "BlocDividend": 10031.7000,
+                    "CompanyId": "GoldenCasket",
+                    "CompanyNumberOfWinners": 12,
+                    "CompanyDividend": 10031.7000,
+                    "PoolTransferType": "NONE",
+                    "PoolTransferredTo": 0,
+                    "PrizeBoostValue": 0.0
+                },
+                {
+                    "Division": 4,
+                    "BlocNumberOfWinners": 1115,
+                    "BlocDividend": 508.5500,
+                    "CompanyId": "GoldenCasket",
+                    "CompanyNumberOfWinners": 162,
+                    "CompanyDividend": 508.5500,
+                    "PoolTransferType": "NONE",
+                    "PoolTransferredTo": 0,
+                    "PrizeBoostValue": 0.0
+                },
+                {
+                    "Division": 5,
+                    "BlocNumberOfWinners": 2502,
+                    "BlocDividend": 169.9500,
+                    "CompanyId": "GoldenCasket",
+                    "CompanyNumberOfWinners": 568,
+                    "CompanyDividend": 169.9500,
+                    "PoolTransferType": "NONE",
+                    "PoolTransferredTo": 0,
+                    "PrizeBoostValue": 0.0
+                },
+                {
+                    "Division": 6,
+                    "BlocNumberOfWinners": 35719,
+                    "BlocDividend": 74.6000,
+                    "CompanyId": "GoldenCasket",
+                    "CompanyNumberOfWinners": 7680,
+                    "CompanyDividend": 74.6000,
+                    "PoolTransferType": "NONE",
+                    "PoolTransferredTo": 0,
+                    "PrizeBoostValue": 0.0
+                },
+                {
+                    "Division": 7,
+                    "BlocNumberOfWinners": 47344,
+                    "BlocDividend": 43.7000,
+                    "CompanyId": "GoldenCasket",
+                    "CompanyNumberOfWinners": 10275,
+                    "CompanyDividend": 43.7000,
+                    "PoolTransferType": "NONE",
+                    "PoolTransferredTo": 0,
+                    "PrizeBoostValue": 0.0
+                },
+                {
+                    "Division": 8,
+                    "BlocNumberOfWinners": 217500,
+                    "BlocDividend": 20.2000,
+                    "CompanyId": "GoldenCasket",
+                    "CompanyNumberOfWinners": 46726,
+                    "CompanyDividend": 20.2000,
+                    "PoolTransferType": "NONE",
+                    "PoolTransferredTo": 0,
+                    "PrizeBoostValue": 0.0
+                },
+                {
+                    "Division": 9,
+                    "BlocNumberOfWinners": 622809,
+                    "BlocDividend": 12.1500,
+                    "CompanyId": "GoldenCasket",
+                    "CompanyNumberOfWinners": 133225,
+                    "CompanyDividend": 12.1500,
+                    "PoolTransferType": "NONE",
+                    "PoolTransferredTo": 0,
+                    "PrizeBoostValue": 0.0
+                }
+            ],
+            "PrizeBoostPercent": 0.0,
+            "PrizeBoost": 0.0
+        }
+    ],
+    "ErrorInfo": null,
+    "Success": true
+}

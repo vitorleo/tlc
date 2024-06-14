@@ -1,0 +1,19 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+a {
+
+}
+a:hover {
+
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: start;
+  padding: 1em;
+  min-width: 320px;
+  min-height: 100vh;
+}
