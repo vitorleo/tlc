@@ -8,7 +8,7 @@ type TicketProps = {
 }
 
 function TicketGrid(props:TicketProps) {
-  const { totalNumbers, drawnNumbers } = props;
+  const { totalNumbers, drawnNumbers=[] } = props;
 
   // Memoize an array for the secondary numbers to make the TOP part of the ticket
   const primaryGrid = useMemo(()=>{
