@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import Number from '../TicketNumber/TicketNumber'
+import TicketNumber from '../TicketNumber/TicketNumber'
 import './TicketGrid.css'
 
 type TicketProps = {
@@ -24,7 +24,7 @@ function TicketGrid(props:TicketProps) {
       {
           primaryGrid.map( (n) => {
               const isDrawn = drawnNumbers.includes(n)    
-              return <Number label={n.toString()} drawn={isDrawn} key={`p_${n}`} />
+              return <TicketNumber label={n.toString()} drawn={isDrawn} key={`p_${n}`} />
           })
       }
     </div>

@@ -1,3 +1,39 @@
+.ticket-number {
+    min-width: 3.1em;
+    padding: 1em 0;
+    text-align: center;
+    font-weight: bold;
+    height: 0.8em;
+    color: #53357E;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 200ms;
+}
+.label {
+    position: relative;
+    z-index: 2;
+}
 .drawn {
-    color: red;
+    background-color: #E2DDED;
+}
+.drawn::before,
+.drawn::after {
+    content: '';
+    position: absolute;
+    width: 0.4em;
+    height: 2.4em;
+    left: 50%;
+    margin-left: -0.2em;
+    background-color: #CAC0DB;
+    z-index: 1;
+}
+
+.drawn::after {
+    transform: rotate(45deg);
+}
+
+.drawn::before {
+    transform: rotate(-45deg);
 }

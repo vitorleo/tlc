@@ -5,12 +5,14 @@ type NumberProps = {
     drawn: boolean
 }
 
-function Number(props:NumberProps) {
+function TicketNumber(props:NumberProps) {
   const { label, drawn } = props;
 
   return (
-      <div className={drawn ? "drawn" : ""}>{label}</div>
+      <div className={`ticket-number ${drawn ? "drawn" : ""}`}>
+        <span className='label'>{label}</span>
+      </div>
   )
 }
 
-export default Number
+export default TicketNumber

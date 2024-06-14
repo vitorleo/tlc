@@ -1,3 +1,13 @@
 h1 {
   color: #3653a4;
 }
+
+.sectionHeader {
+  background-color: #788998;
+  text-transform: uppercase;
+  color: white;
+  font-size: 0.7em;
+  font-weight: 500;
+  padding: 0.5em;
+  text-align: center;
+}
