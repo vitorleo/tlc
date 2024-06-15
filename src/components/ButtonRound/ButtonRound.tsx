@@ -1,5 +1,5 @@
 import { useId } from 'react'
-import './ButtonRound.css'
+import styles from './ButtonRound.module.css'
 
 type NumberProps = {
     label: string;
@@ -15,7 +15,7 @@ function ButtonRound(props:NumberProps) {
   const id = useId()
 
   return (
-    <button type='button' onClick={onCLick} className={`button-round ${isPrimary?"primary":""} ${className}`} style={style} aria-labelledby={id}>
+    <button type='button' onClick={onCLick} className={`${styles["button-round"]} ${isPrimary?"primary":""} ${className}`} style={style} aria-labelledby={id}>
         {icon && 
         <img src={icon} className="icon" alt="button icon" />
         }

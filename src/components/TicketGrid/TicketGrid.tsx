@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import TicketNumber from '../TicketNumber/TicketNumber'
-import './TicketGrid.css'
+import styles from './TicketGrid.module.css'
 
 type TicketProps = {
   totalNumbers: number;
@@ -20,7 +20,7 @@ function TicketGrid(props:TicketProps) {
   }, [totalNumbers]);
 
   return (
-    <div className='ticket-grid'>
+    <div className={styles["ticket-grid"]}>
       {
           primaryGrid.map( (n) => {
               const isDrawn = drawnNumbers.includes(n)    

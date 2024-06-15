@@ -1,4 +1,4 @@
-import './TicketNumber.css'
+import styles from './TicketNumber.module.css'
 
 type NumberProps = {
     label: string
@@ -9,8 +9,8 @@ function TicketNumber(props:NumberProps) {
   const { label, drawn } = props;
 
   return (
-      <div className={`ticket-number ${drawn ? "drawn" : ""}`}>
-        <span className='label'>{label}</span>
+      <div className={`${styles["ticket-number"]} ${drawn ? styles.drawn : ""}`}>
+        <span className={styles.label}>{label}</span>
       </div>
   )
 }
