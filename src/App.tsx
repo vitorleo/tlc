@@ -36,13 +36,13 @@ function App() {
       <h1>Powerball results</h1>
       <div className='top-bar'>
         <div className='drawn-numbers'>
-            { primaryNumbers.map(n => {
-                return <DrawnNumber isDrawn={n ? true : false}>{n}</DrawnNumber>
+            { primaryNumbers.map((n,i) => {
+                return <DrawnNumber isDrawn={n ? true : false} key={"pn"+i}>{n}</DrawnNumber>
               })
             }
 
-            { secondaryNumbers.map(n => {
-                return (<DrawnNumber isDrawn={n ? true : false} isSecondary={true}>
+            { secondaryNumbers.map((n,i) => {
+                return (<DrawnNumber isDrawn={n ? true : false} isSecondary={true} key={"sn"+i}>
                   {n ? n : "PB"}
                 </DrawnNumber>)
               })
