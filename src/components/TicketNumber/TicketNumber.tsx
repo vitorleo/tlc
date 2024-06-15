@@ -9,7 +9,7 @@ function TicketNumber(props:NumberProps) {
   const { label, drawn } = props;
 
   return (
-      <div className={`${styles["ticket-number"]} ${drawn ? styles.drawn : ""}`}>
+      <div className={`${styles["ticket-number"]} ${drawn ? styles.drawn : ""}`} data-testid="ticket-number">
         <span className={styles.label}>{label}</span>
       </div>
   )
