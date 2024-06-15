@@ -5,6 +5,7 @@ import TicketGrid from './components/TicketGrid/TicketGrid'
 import ButtonRound from './components/ButtonRound/ButtonRound'
 import IconFetch from './assets/icon_bolt.svg'
 import IconTrash from './assets/icon_trash.svg'
+import DrawnNumber from './components/DrawnNumber/DrawnNumber'
 
 function App() {
   const [primaryNumbers, setPrimaryNumbers] = useState([]);
@@ -41,7 +42,10 @@ function App() {
       <h1>Powerball results</h1>
       <div className='ticket'>
         <div className='drawnNumbers'>
-
+          <DrawnNumber></DrawnNumber>
+          <DrawnNumber>PB</DrawnNumber>
+          <DrawnNumber isDrawn={true}>2</DrawnNumber>
+          <DrawnNumber isDrawn={true} isSecondary={true}>23</DrawnNumber>
         </div>
         <div>
 

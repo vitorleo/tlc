@@ -1,0 +1,30 @@
+.drawn-number {
+    width: 1.5em;
+    height: 1.5em;
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 1.5em;
+    color: #414141;
+    display: inline-block;
+    background-color: #ffffff;
+    border: #D5D5D5 solid 2px;
+    border-radius: 50%;
+    padding: 0.2em;
+    text-align: center;
+    margin: 0 0.2em;
+    overflow: hidden;
+    box-shadow: inset #D5D5D5 0 2px 2px ;
+}
+
+.drawn-number.drawn {
+    background-color: #2A3C90;
+    color: white;
+    box-shadow: none;
+    border-color: #2A3C90;
+}
+
+.drawn-number.secondary {
+    background-color: #788998;
+    border-color: #788998;
+    color: white;
+}
