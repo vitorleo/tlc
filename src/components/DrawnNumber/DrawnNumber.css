@@ -23,7 +23,7 @@
     border-color: #2A3C90;
 }
 
-.drawn-number.secondary {
+.drawn-number.drawn.secondary {
     background-color: #788998;
     border-color: #788998;
     color: white;

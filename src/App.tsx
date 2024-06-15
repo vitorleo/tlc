@@ -8,8 +8,8 @@ import IconTrash from './assets/icon_trash.svg'
 import DrawnNumber from './components/DrawnNumber/DrawnNumber'
 
 function App() {
-  const [primaryNumbers, setPrimaryNumbers] = useState([]);
-  const [secondaryNumbers, setSecondaryNumbers] = useState([]);
+  const [primaryNumbers, setPrimaryNumbers] = useState(new Array(7).fill(null));
+  const [secondaryNumbers, setSecondaryNumbers] = useState(new Array(1).fill(null));
   const [loadingData, setLoadingData] = useState(false)
 
 
@@ -33,8 +33,8 @@ function App() {
   }
 
   function resetData () {
-    setPrimaryNumbers([]);
-    setSecondaryNumbers([]);
+    setPrimaryNumbers(new Array(7).fill(null));
+    setSecondaryNumbers(new Array(1).fill(null));
   }
 
   return (
@@ -42,10 +42,18 @@ function App() {
       <h1>Powerball results</h1>
       <div className='ticket'>
         <div className='drawnNumbers'>
-          <DrawnNumber></DrawnNumber>
-          <DrawnNumber>PB</DrawnNumber>
-          <DrawnNumber isDrawn={true}>2</DrawnNumber>
-          <DrawnNumber isDrawn={true} isSecondary={true}>23</DrawnNumber>
+          { primaryNumbers.map(n => {
+              return <DrawnNumber isDrawn={n ? true : false}>{n}</DrawnNumber>
+            })
+          }
+
+          { secondaryNumbers.map(n => {
+              return (<DrawnNumber isDrawn={n ? true : false} isSecondary={true}>
+                {n ? n : "PB"}
+              </DrawnNumber>)
+            })
+          }
+
         </div>
         <div>
 
