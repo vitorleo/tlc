@@ -1,9 +1,12 @@
 import { useState } from 'react'
 import './App.css'
+
 import TicketGrid from './components/TicketGrid/TicketGrid'
+import ButtonRound from './components/ButtonRound/ButtonRound'
+import IconFetch from './assets/icon_bolt.svg'
+import IconTrash from './assets/icon_trash.svg'
 
 function App() {
-
   const [primaryNumbers, setPrimaryNumbers] = useState([]);
   const [secondaryNumbers, setSecondaryNumbers] = useState([]);
   const [loadingData, setLoadingData] = useState(false)
@@ -41,9 +44,10 @@ function App() {
 
         </div>
         <div>
-          <button type='button' onClick={fetchResults}>Fetch</button> { }
-          <button type='button' onClick={resetData}>Clean</button> { }
-          {loadingData && <span>Fetching result</span> }
+
+        <ButtonRound icon={IconFetch} onCLick={fetchResults} label="Fetch results" isPrimary={true}></ButtonRound>
+        <ButtonRound icon={IconTrash} onCLick={resetData} label="Clear results"></ButtonRound>
+        {loadingData && <span>Fetching result</span> }
         </div>
       </div>
 

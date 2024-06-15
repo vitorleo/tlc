@@ -1,0 +1,33 @@
+.button-round {
+    width: 2em;
+    height: 2em;
+    display: inline-block;
+    background-color: #626262;
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0 0.2em
+}
+
+.button-round.primary {
+    background-color: #562E83;
+}
+
+.button-round img {
+    width: 100%;
+    height: auto;
+}
+
+.button-round:hover {
+    background-color: #000000;
+}
+
+.button-round .label {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(100%); 
+  height: 1px; 
+  overflow: hidden; 
+  position: absolute; 
+  white-space: nowrap; 
+  width: 1px;
+}
