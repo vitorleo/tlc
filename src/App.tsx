@@ -10,12 +10,8 @@ import DrawnNumber from './components/DrawnNumber/DrawnNumber'
 function App() {
   const [primaryNumbers, setPrimaryNumbers] = useState(new Array(7).fill(null));
   const [secondaryNumbers, setSecondaryNumbers] = useState(new Array(1).fill(null));
-  const [loadingData, setLoadingData] = useState(false)
-
-
 
   function fetchResults():void {
-    setLoadingData(true);
     fetch("https://data.api.thelott.com/sales/vmax/web/data/lotto/latestresults",
       {
         method:"POST",
@@ -24,11 +20,9 @@ function App() {
         const responseObj = await res.json();
         setSecondaryNumbers(responseObj.DrawResults[0].SecondaryNumbers);
         setPrimaryNumbers(responseObj.DrawResults[0].PrimaryNumbers);
-        setLoadingData(false);
       }).catch(err=>{
         // Treat error and inform user
         console.log(err);
-        setLoadingData(false);
       })
   }
 
@@ -40,26 +34,23 @@ function App() {
   return (
     <>
       <h1>Powerball results</h1>
-      <div className='ticket'>
-        <div className='drawnNumbers'>
-          { primaryNumbers.map(n => {
-              return <DrawnNumber isDrawn={n ? true : false}>{n}</DrawnNumber>
-            })
-          }
+      <div className='top-bar'>
+        <div className='drawn-numbers'>
+            { primaryNumbers.map(n => {
+                return <DrawnNumber isDrawn={n ? true : false}>{n}</DrawnNumber>
+              })
+            }
 
-          { secondaryNumbers.map(n => {
-              return (<DrawnNumber isDrawn={n ? true : false} isSecondary={true}>
-                {n ? n : "PB"}
-              </DrawnNumber>)
-            })
-          }
-
+            { secondaryNumbers.map(n => {
+                return (<DrawnNumber isDrawn={n ? true : false} isSecondary={true}>
+                  {n ? n : "PB"}
+                </DrawnNumber>)
+              })
+            }
         </div>
-        <div>
-
-        <ButtonRound icon={IconFetch} onCLick={fetchResults} label="Fetch results" isPrimary={true}></ButtonRound>
-        <ButtonRound icon={IconTrash} onCLick={resetData} label="Clear results"></ButtonRound>
-        {loadingData && <span>Fetching result</span> }
+        <div className='buttons'>
+          <ButtonRound icon={IconFetch} onCLick={fetchResults} label="Fetch results" isPrimary={true}></ButtonRound>
+          <ButtonRound icon={IconTrash} onCLick={resetData} label="Clear results"></ButtonRound>
         </div>
       </div>
 
@@ -67,7 +58,7 @@ function App() {
         totalNumbers={35}
         drawnNumbers={primaryNumbers}
       />
-      <div className='sectionHeader'>
+      <div className='section-header'>
             Select your Powerball
       </div>
       <TicketGrid

@@ -2,7 +2,20 @@ h1 {
   color: #3653a4;
 }
 
-.sectionHeader {
+.top-bar {
+  display: flex;
+}
+
+.drawn-numbers {
+  flex: 1;
+  text-align: center;
+}
+
+.buttons {
+  margin-right: -5em;
+}
+
+.section-header {
   background-color: #788998;
   text-transform: uppercase;
   color: white;
