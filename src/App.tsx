@@ -7,6 +7,13 @@ import IconFetch from './assets/icon_bolt.svg'
 import IconTrash from './assets/icon_trash.svg'
 import DrawnNumber from './components/DrawnNumber/DrawnNumber'
 
+const APP_TITLE = "Powerball results";
+const MID_SECTION_TITLE = "Select your Powerball";
+const TOTAL_PRIMARY = 35;
+const TOTAL_SECONDARY = 20;
+const LABEL_FETCH = "Fetch latest result";
+const LABEL_CLEAR = "Clear results";
+
 function App() {
   const [primaryNumbers, setPrimaryNumbers] = useState(new Array(7).fill(null));
   const [secondaryNumbers, setSecondaryNumbers] = useState(new Array(1).fill(null));
@@ -33,7 +40,7 @@ function App() {
 
   return (
     <>
-      <h1>Powerball results</h1>
+      <h1>{APP_TITLE}</h1>
       <div className='top-bar'>
         <div className='drawn-numbers'>
             { primaryNumbers.map((n,i) => {
@@ -49,20 +56,20 @@ function App() {
             }
         </div>
         <div className='buttons'>
-          <ButtonRound icon={IconFetch} onClick={fetchResults} label="Fetch results" isPrimary={true}></ButtonRound>
-          <ButtonRound icon={IconTrash} onClick={resetData} label="Clear results"></ButtonRound>
+          <ButtonRound icon={IconFetch} onClick={fetchResults} label={LABEL_FETCH} isPrimary={true}></ButtonRound>
+          <ButtonRound icon={IconTrash} onClick={resetData} label={LABEL_CLEAR}></ButtonRound>
         </div>
       </div>
 
       <TicketGrid
-        totalNumbers={35}
+        totalNumbers={TOTAL_PRIMARY}
         drawnNumbers={primaryNumbers}
       />
       <div className='section-header'>
-            Select your Powerball
+            {MID_SECTION_TITLE}
       </div>
       <TicketGrid
-        totalNumbers={20}
+        totalNumbers={TOTAL_SECONDARY}
         drawnNumbers={secondaryNumbers}
       />
     </>

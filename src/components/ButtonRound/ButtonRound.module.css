@@ -18,7 +18,8 @@
     height: auto;
 }
 
-.button-round:hover {
+.button-round:hover,
+.button-round:focus {
     background-color: #000000;
 }
 
