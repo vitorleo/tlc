@@ -20,7 +20,7 @@ function TicketGrid(props:TicketProps) {
   }, [totalNumbers]);
 
   return (
-    <div className={styles["ticket-grid"]}>
+    <div className={styles["ticket-grid"]} data-testid="ticket-grid">
       {
           primaryGrid.map( (n) => {
               const isDrawn = drawnNumbers.includes(n)    

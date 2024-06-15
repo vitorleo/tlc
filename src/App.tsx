@@ -49,8 +49,8 @@ function App() {
             }
         </div>
         <div className='buttons'>
-          <ButtonRound icon={IconFetch} onCLick={fetchResults} label="Fetch results" isPrimary={true}></ButtonRound>
-          <ButtonRound icon={IconTrash} onCLick={resetData} label="Clear results"></ButtonRound>
+          <ButtonRound icon={IconFetch} onClick={fetchResults} label="Fetch results" isPrimary={true}></ButtonRound>
+          <ButtonRound icon={IconTrash} onClick={resetData} label="Clear results"></ButtonRound>
         </div>
       </div>
 
