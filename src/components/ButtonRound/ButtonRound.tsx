@@ -15,7 +15,12 @@ function ButtonRound(props:NumberProps) {
   const id = useId()
 
   return (
-    <button type='button' onClick={onClick} className={`${styles["button-round"]} ${isPrimary?"primary":""} ${className}`} style={style} aria-labelledby={id}>
+    <button
+      type='button'
+      onClick={onClick}
+      className={`${styles["button-round"]} ${isPrimary?"primary":""} ${className}`}
+      style={style}
+      aria-labelledby={id}>
         {icon && 
         <img src={icon} className="icon" alt="button icon" />
         }
