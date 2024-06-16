@@ -13,3 +13,5 @@ Open the app at [http://localhost:5173/](http://localhost:5173/)
 To run components unit tests
 
 ```npm run test```
+
+e2e tests can be found in the branch "e2e-test"
